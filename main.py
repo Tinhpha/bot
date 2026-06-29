@@ -57,3 +57,16 @@ except discord.LoginFailure:
 
 except Exception as e:
     print(f"❌ Lỗi khi khởi động bot: {e}")
+import traceback
+
+@bot.event
+async def on_error(event, *args, **kwargs):
+    print("===== BOT ERROR =====")
+    traceback.print_exc()
+
+
+try:
+    bot.run(TOKEN)
+except Exception:
+    print("===== CRASH =====")
+    traceback.print_exc()
