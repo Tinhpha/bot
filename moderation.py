@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-
+from datetime import timedelta
 import config
 from logger import send_log
 
@@ -113,7 +113,7 @@ class Moderation(commands.Cog):
 
         duration = discord.utils.utcnow()
 
-        until = duration + discord.timedelta(
+        until = duration + timedelta(
             minutes=10
         )
 
