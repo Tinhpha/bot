@@ -466,7 +466,7 @@ async def on_message(message):
 
     await check_message(message)
 
-def setup(bot):
+async def setup(bot):
 
     global BOT_INSTANCE
 

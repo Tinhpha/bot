@@ -201,4 +201,5 @@ class Moderation(commands.Cog):
 # SETUP
 # ==========================
 
-moderation.setup(bot)
+async def setup(bot):
+    await bot.add_cog(Moderation(bot))
